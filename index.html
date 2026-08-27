@@ -211,11 +211,12 @@
                     </div>
                 </div>
 
-           <!-- Teacher 2 -->
+          <!-- Teacher 2 (фото помещается целиком) -->
 <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/60 shadow-sm hover:shadow-md transition-shadow">
-    <div class="h-48 relative overflow-hidden">
-        <img src="myphoto.jpeg" alt="Regina Lukjanchik" class="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-300">
-        <span class="absolute bottom-4 left-4 px-2.5 py-1 bg-black/40 backdrop-blur-md text-white text-xs font-semibold rounded-full">
+    <div class="h-48 bg-slate-900 flex justify-center items-center relative overflow-hidden">
+        <!-- object-contain заставляет картинку поместиться ПОЛНОСТЬЮ без обрезки -->
+        <img src="myphoto.jpeg" alt="Regina Lukjanchik" class="h-full w-auto object-contain py-2">
+        <span class="absolute bottom-4 left-4 px-2.5 py-1 bg-black/50 backdrop-blur-md text-white text-xs font-semibold rounded-full">
             Applied Programming Educator
         </span>
     </div>
