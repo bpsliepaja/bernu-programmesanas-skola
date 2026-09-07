@@ -1,108 +1,338 @@
-<!-- HERO SECTION -->
-    <section class="relative py-16 lg:py-24 overflow-hidden bg-gradient-to-b from-purple-50/60 via-blue-50/40 to-transparent">
-        <!-- Декоративные фоновые пятна для дружелюбной атмосферы -->
-        <div class="absolute top-10 left-10 w-72 h-72 bg-purple-300/30 rounded-full blur-3xl pointer-events-none"></div>
-        <div class="absolute bottom-10 right-10 w-80 h-80 bg-cyan-300/30 rounded-full blur-3xl pointer-events-none"></div>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bērnu programmēšanas skola Bērniem no 9 līdz 16</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased overflow-x-hidden">
 
+    <!-- HEADER / NAVIGATION -->
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center text-white shadow-md shadow-blue-200">
+                    <i class="fa-solid fa-code text-lg"></i>
+                </div>
+                <span class="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Bērnu Programmešānas Skola</span>
+            </div>
+            
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+                <a href="#courses" class="hover:text-blue-600 transition-colors">Courses</a>
+                <a href="#age-groups" class="hover:text-purple-600 transition-colors">Age Groups</a>
+                <a href="#why-us" class="hover:text-cyan-600 transition-colors">Why Choose Us</a>
+                <a href="#teachers" class="hover:text-blue-600 transition-colors">Teachers</a>
+                <a href="#contact" class="hover:text-blue-600 transition-colors">Contact</a>
+            </nav>
+            <div class="hidden md:flex items-center">
+                <a href="#contact" class="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-full shadow-lg shadow-blue-100 transition-all hover:-translate-y-0.5">Free Trial Lesson</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative py-16 lg:py-24 overflow-hidden bg-gradient-to-b from-blue-50/50 via-white to-transparent">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid lg:grid-cols-12 gap-12 items-center">
-                
-                <!-- Левая часть: Заголовок и Текст -->
                 <div class="lg:col-span-7 text-center lg:text-left space-y-6">
-                    <span class="inline-flex items-center gap-2 px-3.5 py-1.5 bg-purple-100 text-purple-700 text-xs font-bold rounded-full uppercase tracking-wider">
-                        <span class="w-2 h-2 rounded-full bg-purple-500 animate-pulse"></span> 🚀 Для будущих создателей игр и приложений
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-cyan-50 text-cyan-700 text-xs font-semibold rounded-full uppercase tracking-wider">
+                        <span class="w-2 h-2 rounded-full bg-cyan-500 animate-pulse"></span> programming and technology school for children
                     </span>
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.15]">
-                        Превращаем любовь к играм в <span class="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-500 bg-clip-text text-transparent">Суперсилу</span>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900 leading-[1.1]">
+                        Where Kids Tech Skills Become Their <span class="bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-500 bg-clip-text text-transparent">Superpowers</span>
                     </h1>
-                    <p class="text-lg text-slate-600 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-                        Ребенок больше не просто играет — он создает свои миры! Учим программированию, 3D-моделированию и логике через Scratch, Minecraft, Python и Roblox.
+                    <p class="text-lg text-slate-600 max-w-xl mx-auto lg:mx-0">
+                        Empowering brilliant minds aged 7–16 with future-ready coding, game development, and algorithmic thinking skills through interactive, hands-on masterclasses.
                     </p>
                     <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-                        <a href="#contact" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-bold rounded-2xl shadow-lg shadow-orange-500/25 transition-all hover:-translate-y-1 text-center">
-                            Записаться на бесплатный урок 🎮
+                        <a href="#contact" class="w-full sm:w-auto px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-xl shadow-lg shadow-orange-200 transition-all hover:-translate-y-0.5 text-center">
+                            Book a Free Trial Lesson
                         </a>
-                        <a href="#courses" class="w-full sm:w-auto px-8 py-4 bg-white hover:bg-slate-50 text-slate-700 font-semibold rounded-2xl border border-slate-200 transition-all text-center shadow-sm">
-                            Смотреть курсы <i class="fa-solid fa-arrow-right ml-1 text-sm text-slate-400"></i>
+                        <a href="#courses" class="w-full sm:w-auto px-8 py-4 bg-white hover:bg-slate-50 text-slate-700 font-semibold rounded-xl border border-slate-200 transition-all text-center">
+                            Explore Courses <i class="fa-solid fa-arrow-right ml-1 text-sm text-slate-400"></i>
                         </a>
                     </div>
                 </div>
-
-                <!-- Правая часть: Визуализация Игры и Эмоций -->
                 <div class="lg:col-span-5 relative">
-                    
-                    <!-- Плавающие игровые значки вокруг карточки -->
-                    <div class="absolute -top-6 -left-6 z-20 bg-amber-400 text-white p-3.5 rounded-2xl shadow-lg transform -rotate-12 animate-bounce duration-1000">
-                        <i class="fa-solid fa-gamepad text-2xl"></i>
-                    </div>
-                    <div class="absolute -bottom-6 -right-4 z-20 bg-purple-600 text-white p-3.5 rounded-2xl shadow-lg transform rotate-12">
-                        <i class="fa-solid fa-cubes text-2xl"></i>
-                    </div>
-                    <div class="absolute top-1/2 -right-8 z-20 bg-emerald-500 text-white px-3 py-1.5 rounded-xl shadow-md text-xs font-bold hidden sm:flex items-center gap-1.5">
-                        <i class="fa-solid fa-trophy text-amber-300"></i> Level Up!
-                    </div>
-
-                    <!-- Основное игровое окно -->
-                    <div class="relative bg-white/80 backdrop-blur-md p-3 rounded-3xl shadow-2xl shadow-purple-500/10 border border-white">
-                        <div class="relative rounded-2xl overflow-hidden bg-gradient-to-b from-sky-400 to-indigo-600 aspect-[4/3] flex flex-col justify-between p-4 shadow-inner">
-                            
-                            <!-- Шапка игрового окна -->
-                            <div class="flex items-center justify-between z-10">
-                                <div class="flex items-center gap-1.5 bg-black/30 backdrop-blur-md px-3 py-1 rounded-full text-white text-xs font-bold">
-                                    <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Live Game Demo
-                                </div>
-                                <div class="bg-amber-400 text-slate-900 px-3 py-1 rounded-full text-xs font-black shadow-sm flex items-center gap-1">
-                                    <i class="fa-solid fa-star text-white"></i> Score: 1250
-                                </div>
-                            </div>
-
-                            <!-- Игровой сюжет (Персонаж, Монеты, Платформы) -->
-                            <div class="relative flex-1 flex items-center justify-center my-2">
-                                <!-- Фон с облаками -->
-                                <i class="fa-solid fa-cloud text-white/30 text-4xl absolute top-2 left-4"></i>
-                                <i class="fa-solid fa-cloud text-white/20 text-5xl absolute top-6 right-8"></i>
-
-                                <!-- Блок кода Scratch/Визуальный скрипт -->
-                                <div class="absolute left-2 top-4 bg-slate-900/90 backdrop-blur-md border border-slate-700/50 p-2.5 rounded-xl text-[11px] font-mono text-white shadow-xl max-w-[170px] z-10">
-                                    <div class="text-purple-400 font-bold">when GREEN FLAG clicked</div>
-                                    <div class="text-cyan-300 ml-2">forever {</div>
-                                    <div class="text-emerald-400 ml-4">move (10) steps</div>
-                                    <div class="text-amber-300 ml-4">play sound [Jump!]</div>
-                                    <div class="text-cyan-300 ml-2">}</div>
-                                </div>
-
-                                <!-- Главный персонаж (Робот/Маскот) -->
-                                <div class="relative z-10 text-center transform hover:scale-110 transition-transform cursor-pointer">
-                                    <div class="w-20 h-20 bg-gradient-to-tr from-amber-400 to-orange-400 rounded-3xl flex items-center justify-center text-white text-4xl shadow-lg border-4 border-white mx-auto">
-                                        <i class="fa-solid fa-robot animate-pulse"></i>
+                    <div class="absolute inset-0 bg-gradient-to-tr from-purple-300 via-blue-200 to-cyan-200 rounded-3xl blur-3xl opacity-30 -rotate-6 scale-95"></div>
+                    <div class="relative bg-white p-4 rounded-3xl shadow-xl shadow-slate-100 border border-slate-100/80">
+                        <div class="relative rounded-2xl overflow-hidden bg-slate-950 aspect-[4/3] flex items-center justify-center p-6">
+                            <div class="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+                            <div class="relative z-10 w-full max-w-sm space-y-4">
+                                <div class="flex items-center gap-3 bg-slate-900/80 backdrop-blur-sm p-3.5 rounded-xl border border-slate-800">
+                                    <div class="w-8 h-8 rounded-lg bg-orange-500/20 flex items-center justify-center text-orange-400 font-mono text-sm">&lt;/&gt;</div>
+                                    <div class="flex-1 font-mono text-xs text-emerald-400">
+                                        <p class="text-slate-500">// Initialize Future</p>
+                                        <p>const coder = new Kid({ age: 10 });</p>
+                                        <p>coder.createGame();</p>
                                     </div>
-                                    <!-- Платформа под персонажем -->
-                                    <div class="w-28 h-4 bg-emerald-500 rounded-full mx-auto mt-2 shadow-md border-b-4 border-emerald-700"></div>
                                 </div>
-
-                                <!-- Собранная монета -->
-                                <div class="absolute right-12 top-8 text-amber-300 text-2xl animate-bounce">
-                                    <i class="fa-solid fa-coins"></i>
+                                <div class="flex justify-between items-center gap-4">
+                                    <div class="bg-blue-600/90 text-white p-4 rounded-xl flex flex-col items-center flex-1 text-center">
+                                        <i class="fa-solid fa-cubes text-xl mb-1 text-cyan-300"></i>
+                                        <span class="text-[10px] uppercase font-bold tracking-wider opacity-80">programming block</span>
+                                    </div>
+                                    <div class="bg-purple-600/90 text-white p-4 rounded-xl flex flex-col items-center flex-1 text-center">
+                                        <i class="fa-solid fa-gamepad text-xl mb-1 text-pink-300"></i>
+                                        <span class="text-[10px] uppercase font-bold tracking-wider opacity-80">Games - 2D and 3D</span>
+                                    </div>
                                 </div>
                             </div>
-
-                            <!-- Подвал игрового окна: Кнопки управления -->
-                            <div class="flex items-center justify-between gap-2 z-10 pt-2 border-t border-white/20">
-                                <div class="flex gap-2">
-                                    <span class="px-3 py-1.5 bg-white/20 backdrop-blur-md rounded-lg text-white text-xs font-semibold flex items-center gap-1">
-                                        <i class="fa-solid fa-wand-magic-sparkles text-amber-300"></i> Scratch 3.0
-                                    </span>
-                                </div>
-                                <button class="px-4 py-1.5 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs rounded-lg shadow-md transition-colors flex items-center gap-1.5 cursor-pointer">
-                                    <i class="fa-solid fa-play"></i> RUN CODE
-                                </button>
-                            </div>
-
                         </div>
                     </div>
-
                 </div>
-
             </div>
         </div>
     </section>
+
+    <!-- COURSES SECTION -->
+    <section id="courses" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto space-y-3 mb-16">
+                <h2 class="text-xs uppercase font-bold tracking-widest text-blue-600">Curriculum Hierarchy</h2>
+                <p class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">Expertly Crafted Courses</p>
+                <p class="text-slate-500">From block-based drag-and-drop mechanics to professional high-level syntax architectures.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Course 1 -->
+                <div class="group bg-slate-50 hover:bg-white rounded-2xl p-6 border border-slate-100 hover:border-blue-100 shadow-sm hover:shadow-xl hover:shadow-blue-50/50 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-shapes"></i>
+                    </div>
+                    <span class="px-2.5 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded-md">Ages 9-12</span>
+                    <h3 class="text-xl font-bold text-slate-900 mt-3 mb-2">Scratch for Beginners</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Learn basic programming logic using block structures. Create custom animated cards, interactive scenarios, and retro games.</p>
+                    <div class="pt-4 border-t border-slate-200/60 flex items-center justify-between text-xs text-slate-400 font-medium">
+                        <span><i class="fa-regular fa-clock mr-1"></i> II semesters</span>
+                        <span>Next class: Tomorrow</span>
+                    </div>
+                </div>
+
+                <!-- Course 2 -->
+                <div class="group bg-slate-50 hover:bg-white rounded-2xl p-6 border border-slate-100 hover:border-purple-100 shadow-sm hover:shadow-xl hover:shadow-purple-50/50 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-code-branch"></i>
+                    </div>
+                    <span class="px-2.5 py-1 bg-purple-50 text-purple-700 text-xs font-semibold rounded-md">Ages 12–14</span>
+                    <h3 class="text-xl font-bold text-slate-900 mt-3 mb-2">Game development in Python</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Master algorithmic flows, coordinates, and logic states by designing desktop arcade games and multi-level platforms.</p>
+                    <div class="pt-4 border-t border-slate-200/60 flex items-center justify-between text-xs text-slate-400 font-medium">
+                        <span><i class="fa-regular fa-clock mr-1"></i> II semesters</span>
+                        <span>Next class: September</span>
+                    </div>
+                </div>
+
+                <!-- Course 3 -->
+                <div class="group bg-slate-50 hover:bg-white rounded-2xl p-6 border border-slate-100 hover:border-cyan-100 shadow-sm hover:shadow-xl hover:shadow-cyan-50/50 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-cyan-100 text-cyan-600 flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform">
+                        <i class="fa-brands fa-java"></i>
+                    </div>
+                    <span class="px-2.5 py-1 bg-cyan-50 text-cyan-700 text-xs font-semibold rounded-md">Ages 13–16</span>
+                    <h3 class="text-xl font-bold text-slate-900 mt-3 mb-2">Java Programming</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Deep dive into standard Object-Oriented Programming (OOP), variables, arrays, and backend development architectures.</p>
+                    <div class="pt-4 border-t border-slate-200/60 flex items-center justify-between text-xs text-slate-400 font-medium">
+                        <span><i class="fa-regular fa-clock mr-1"></i> II semesters</span>
+                        <span>Next class: Filling fast</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AGE GROUPS -->
+    <section id="age-groups" class="py-20 bg-slate-100/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto space-y-3 mb-16">
+                <h2 class="text-xs uppercase font-bold tracking-widest text-purple-600">Tailored Tracks</h2>
+                <p class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">Psychology-Driven Age Groups</p>
+                <p class="text-slate-500">Every lesson matches the cognitive development, fine motor skills, and learning pace of your child.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Group 1 -->
+                <div class="bg-white rounded-2xl p-8 border border-slate-200/60 shadow-sm relative overflow-hidden">
+                    <div class="text-3xl font-extrabold text-blue-600 mb-2">9–12</div>
+                    <div class="text-xs uppercase tracking-wider font-bold text-slate-400 mb-4">Years Old</div>
+                    <h4 class="text-lg font-bold text-slate-900 mb-2">Visual & Playful</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">Focuses on building fine logical intuition, spatial orientation, and narrative creation without complicated typing stress.</p>
+                </div>
+                <!-- Group 2 -->
+                <div class="bg-white rounded-2xl p-8 border border-slate-200/60 shadow-sm relative overflow-hidden">
+                    <div class="text-3xl font-extrabold text-purple-600 mb-2">12–14</div>
+                    <div class="text-xs uppercase tracking-wider font-bold text-slate-400 mb-4">Years Old</div>
+                    <h4 class="text-lg font-bold text-slate-900 mb-2">Architects of Logic</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">Transition stage from visual puzzle blocks to multi-step problem solving, math execution, and complex algorithm configurations.</p>
+                </div>
+                <!-- Group 3 -->
+                <div class="bg-white rounded-2xl p-8 border border-slate-200/60 shadow-sm relative overflow-hidden">
+                    <div class="text-3xl font-extrabold text-cyan-600 mb-2">13–16</div>
+                    <div class="text-xs uppercase tracking-wider font-bold text-slate-400 mb-4">Years Old</div>
+                    <h4 class="text-lg font-bold text-slate-900 mb-2">Production Syntax</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">Genuine syntax programming used by modern engineering teams worldwide. Preparing solid fundamental pathways for future tech fields.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEACHERS SECTION -->
+    <section id="teachers" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto space-y-3 mb-16">
+                <h2 class="text-xs uppercase font-bold tracking-widest text-blue-600">Best Practices</h2>
+                <p class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">Top Authors & Creators</p>
+                <p class="text-slate-500">We build our curriculum on courses from world-class engineers to give you industry-standard skills.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Teacher 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/60 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="h-48 relative overflow-hidden">
+                        <img src="david.jpg" alt="David J. Malan" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                        <span class="absolute bottom-4 left-4 px-2.5 py-1 bg-black/40 backdrop-blur-md text-white text-[10px] font-semibold rounded-full">
+                            Photo: David J. Malan / Harvard • CC BY 4.0
+                        </span>
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <h3 class="text-lg font-bold text-slate-900">David J. Malan</h3>
+                        <p class="text-xs text-purple-600 font-semibold uppercase tracking-wider">Professor at Harvard University</p>
+                        <p class="text-xs text-slate-600 leading-relaxed">Renowned for making complex programming concepts understandable and engaging for millions worldwide.</p>
+                    </div>
+                </div>
+
+         <!-- Teacher 2 -->
+<div class="bg-white rounded-2xl overflow-hidden border border-slate-200/60 shadow-sm hover:shadow-md transition-shadow">
+    <div class="h-48 relative overflow-hidden bg-slate-100">
+        <!-- Класс object-[center_20%] опустит фотографию ниже, чтобы видно было лицо, а не только волосы -->
+        <img src="myphoto.jpeg" alt="Regina Lukjanchik" class="w-full h-full object-cover object-[center_20%] hover:scale-105 transition-transform duration-300">
+        <span class="absolute bottom-4 left-4 px-2.5 py-1 bg-black/40 backdrop-blur-md text-white text-xs font-semibold rounded-full">
+            Applied Programming Educator
+        </span>
+    </div>
+    <div class="p-6 space-y-3">
+        <h3 class="text-lg font-bold text-slate-900">Regina Lukjanchik</h3>
+        <p class="text-xs text-purple-600 font-semibold uppercase tracking-wider">Lead Teacher & Founder</p>
+        <p class="text-xs text-slate-600 leading-relaxed">Indie game creator who loves transforming complex vector math into fun mechanics kids understand instantly.</p>
+    </div>
+</div>
+
+                <!-- Teacher 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/60 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="h-48 relative overflow-hidden">
+                        <img src="angela.png" alt="Angela Yu" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                        <span class="absolute bottom-4 left-4 px-2.5 py-1 bg-black/40 backdrop-blur-md text-white text-xs font-semibold rounded-full">
+                            Senior Mentor
+                        </span>
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <h3 class="text-lg font-bold text-slate-900">Dr. Angela Yu</h3>
+                        <p class="text-xs text-purple-600 font-semibold uppercase tracking-wider">Founder of The App Brewery</p>
+                        <p class="text-xs text-slate-600 leading-relaxed">Known worldwide for her focus on real-world projects and practical programming skills.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT & FORM SECTION -->
+    <section id="contact" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200/80 shadow-xl shadow-slate-100/50">
+                <div class="grid lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Left side info -->
+                    <div class="lg:col-span-5 space-y-6">
+                        <span class="text-xs uppercase font-bold tracking-widest text-blue-600">Get In Touch</span>
+                        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">Claim Your Free Entry Ticket</h2>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Have questions about curriculum tracks, age fits, or specific schedules? Fill out the brief form, and our system mentor will call you back within 15 minutes.
+                        </p>
+                        
+                        <div class="space-y-4 pt-4 text-sm text-slate-600 font-medium">
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-phone text-blue-600 w-5"></i>
+                                <span>+371 2883392</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-envelope text-blue-600 w-5"></i>
+                                <span>aniger@inbox.lv</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-location-dot text-blue-600 w-5"></i>
+                                <span>Ludviķa 10, Liepāja, Latvija LV 3401, Suite 3.1</span>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 pt-4 text-slate-400 text-lg">
+                            <a href="#" class="hover:text-blue-600 transition-colors"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#" class="hover:text-pink-600 transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" class="hover:text-blue-700 transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Right side working form with key -->
+                    <div class="lg:col-span-7">
+                        <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+                            
+                            <!-- YOUR ACCESS KEY -->
+                            <input type="hidden" name="access_key" value="14f88a42-8b09-4ffa-a538-e87b1d6b6311">
+
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-600 mb-1">Parent's Name</label>
+                                    <input type="text" name="parent_name" required placeholder="Test" 
+                                           class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50/50 focus:bg-white focus:outline-none focus:border-blue-500 text-sm transition-all">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-600 mb-1">Child's Age</label>
+                                    <input type="number" name="child_age" min="7" max="16" required placeholder="11" 
+                                           class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50/50 focus:bg-white focus:outline-none focus:border-blue-500 text-sm transition-all">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-600 mb-1">Phone Number</label>
+                                <input type="tel" name="phone" required placeholder="232325543434" 
+                                       class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50/50 focus:bg-white focus:outline-none focus:border-blue-500 text-sm transition-all">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-600 mb-1">Preferred Track</label>
+                                <select name="preferred_track" class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50/50 focus:bg-white focus:outline-none focus:border-blue-500 text-sm transition-all">
+                                    <option value="Scratch (Ages 9-12)">Scratch for Beginners (Ages 9-12)</option>
+                                    <option value="Python (Ages 12-14)">Game Development in Python (Ages 12-14)</option>
+                                    <option value="Java (Ages 13-16)">Java Programming (Ages 13-16)</option>
+                                    <option value="Web (Ages 13-16)">Web Programming (Ages 13-16)</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" 
+                                    class="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl shadow-lg shadow-blue-200 transition-all cursor-pointer">
+                                Submit Free Booking Request
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-slate-200 py-8 text-center text-xs text-slate-400">
+        <p>© Bērnu Programmēšanas Skola. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
